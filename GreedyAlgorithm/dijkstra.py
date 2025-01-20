@@ -14,6 +14,7 @@ def dijkstra(graph, start):
     while priority_queue:
         # Step 2: 取出堆顶元素，最短路径长度最小的节点
         current_dist, current_node = heapq.heappop(priority_queue)
+        #这一步可以用fibonacci堆来加速
 
         # 如果当前节点的距离已经大于已知最短距离，则跳过
         if current_dist > dist[current_node]:
